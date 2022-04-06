@@ -1,0 +1,14 @@
+{
+    "name": "KakaoStroy Downloader",
+    "description": "Download images of kakao-story posts",
+    "version": "1.0",
+    "manifest_version": 3,
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+    },
+    "permissions": ["scripting", "storage"]
+}

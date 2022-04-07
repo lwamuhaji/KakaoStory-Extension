@@ -3,12 +3,18 @@
     "description": "Download images of kakao-story posts",
     "version": "1.0",
     "manifest_version": 3,
-    "background": {
-        "service_worker": "background.js"
-    },
     "action": {
       "default_icon": "icon.png",
       "default_popup": "popup.html"
     },
+    "background" : {
+      "service_worker" : "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://story.kakao.com/*"],
+        "js": ["content.js"]
+      }
+    ],
     "permissions": ["scripting", "storage", "activeTab", "downloads"]
 }
